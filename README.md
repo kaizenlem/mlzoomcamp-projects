@@ -33,6 +33,11 @@ Predicting Customer Lifetime Value (CLV) for B2B E-Commerce Using Machine Learni
     
     Note: In this B2B simulation, each “visitorid” is treated as a business customer account.
 
+    
+    Data files available via https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
+
+    Place the datasets in the project root before running code.
+
 
 5. Intended Use of the Solution
 
