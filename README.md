@@ -4,11 +4,9 @@ Predicting Customer Lifetime Value (CLV) for B2B E-Commerce Using Machine Learni
 1. Business Context & Motivation
 For B2B e-commerce companies, understanding which customers will generate the most long-term revenue is critical for resource allocation, account management, and retention marketing. By predicting Customer Lifetime Value (CLV), the business can:
 
-Prioritize high-potential clients for account management.
-
-Design targeted retention offers for at-risk, high-value clients.
-
-Optimize marketing spending and sales effort.
+  Prioritize high-potential clients for account management.
+  Design targeted retention offers for at-risk, high-value clients.
+  Optimize marketing spending and sales effort.
 
 2. Problem Statement
 The objective of this project is to develop a machine learning model that predicts the Customer Lifetime Value (CLV) of B2B accounts based on their historical purchase behavior. The CLV prediction allows the company to forecast the future value each business client brings.
