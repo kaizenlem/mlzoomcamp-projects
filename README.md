@@ -35,6 +35,7 @@ Predicting Customer Lifetime Value (CLV) for B2B E-Commerce Using Machine Learni
 
     
     Data Access
+
         This repository does not include raw data files due to their size.
 
         Please download the dataset(s) manually from https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
@@ -94,3 +95,46 @@ Predicting Customer Lifetime Value (CLV) for B2B E-Commerce Using Machine Learni
     Model Training Code
 
     The logic and steps for data loading, feature engineering, and model training are provided in both the notebook and the dedicated train.py script for reproducibility.
+
+
+
+7. API Usage
+
+        ## Running the API
+
+        1. **Install requirements:**
+
+            pip install -r requirements.txt
+
+
+        2. **Train the model (if not done yet):**
+
+            python train.py
+
+
+        3. **Start the API:**
+
+            uvicorn main:app --reload
+
+
+        4. **Test API via Swagger UI:**
+
+            Open [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) in your browser.
+
+
+            ### Sample API Request (JSON)
+
+            POST to `/predict` with:
+            {
+            "first_purchase": 1433176736375,
+            "last_purchase": 1433222276276,
+            "product_diversity": 5,
+            "recency": 0
+            }
+
+        
+            Response:
+            {
+            "predicted_clv": 1.07
+            }
+
