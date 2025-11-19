@@ -1,0 +1,21 @@
+# Data and EDA
+pandas
+numpy
+matplotlib
+seaborn
+jupyter
+
+# Machine Learning
+scikit-learn
+xgboost
+
+# Model Serialization
+joblib
+
+# Progress bars
+tqdm
+
+# Model Deployment (API)
+fastapi
+uvicorn        
+
