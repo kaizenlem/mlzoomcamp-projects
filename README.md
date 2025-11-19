@@ -41,3 +41,38 @@ Predicting Customer Lifetime Value (CLV) for B2B E-Commerce Using Machine Learni
     Build targeted campaigns and optimize resource allocation for high-value accounts.
     
     Use it as a test bed for future personalization and upsell strategies.
+
+
+6. Model Training and Evaluation
+
+   Evaluated three regression models for predicting Customer Lifetime Value (CLV) as the number of purchases per customer:
+
+    Linear Regression
+
+    Decision Tree Regressor
+
+    XGBoost Regressor
+
+
+    Evaluation Metrics
+    Model performance was measured using:
+
+    | Model             | RMSE | R2R^2R2 |
+    | ----------------- | ---- | ------- |
+    | Linear Regression | 0.53 | 1.00    |
+    | Decision Tree     | 1.52 | 0.97    |
+    | XGBoost           | 0.81 | 0.99    |
+
+
+
+    Model Selection
+
+    Linear Regression achieved the best results in terms of both RMSE and 
+
+    R2. This model has been selected for deployment.
+
+
+
+    Model Training Code
+
+    The logic and steps for data loading, feature engineering, and model training are provided in both the notebook and the dedicated train.py script for reproducibility.
