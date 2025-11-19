@@ -1,0 +1,6 @@
+events.csv
+item_properties_part1.csv
+item_properties_part2.csv
+category_tree.csv
+*.joblib
+*.csv
