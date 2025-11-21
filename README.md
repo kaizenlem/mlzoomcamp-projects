@@ -2,6 +2,12 @@
 
 Predicting Customer Lifetime Value (CLV) for B2B E-Commerce Using Machine Learning
 
+   This project predicts Customer Lifetime Value (CLV) using behavioral data from an e-commerce platform. The pipeline includes data cleaning, EDA, feature engineering, training and comparing 
+   
+   multiple regression models (Linear Regression, Decision Tree, XGBoost), and deploying the best model as a web service using FastAPI.
+
+
+
 1. Business Context & Motivation
    
     For B2B e-commerce companies, understanding which customers will generate the most long-term revenue is critical for resource allocation, account management, and retention marketing. By predicting Customer Lifetime Value (CLV), the business can:
@@ -51,9 +57,34 @@ Predicting Customer Lifetime Value (CLV) for B2B E-Commerce Using Machine Learni
                 category_tree.csv
 
 
+         Directory Structure
+         ├── clv.ipynb                # Full EDA, feature engineering, model comparison
+         ├── train.py                 # Script to train and export final model
+         ├── main.py                  # FastAPI app for model deployment
+         ├── requirements.txt         # Project dependencies
+         ├── .gitignore               # Files/folders excluded from git
+         ├── Dockerfile               # (Optional) for containerized deployment
+         ├── README.md                # Project instructions and documentation
+         └── data/                    # (Not in repo) User-downloaded CSV data files
+         
+
+      Setup Instructions
+
+      Clone this repo:
+      
+            bash
+            git clone <your-repo-link>
+            cd <project-folder>
+
+      Install dependencies:
+            
+            bash
+            pip install -r requirements.txt
+
+      Download data files and place them in the project folder.
 
 
-5. Intended Use of the Solution
+6. Intended Use of the Solution
 
     Integrate CLV predictions into sales and marketing dashboards.
     
@@ -62,7 +93,23 @@ Predicting Customer Lifetime Value (CLV) for B2B E-Commerce Using Machine Learni
     Use it as a test bed for future personalization and upsell strategies.
 
 
-6. Model Training and Evaluation
+
+
+
+      Exploratory Data Analysis (EDA)
+      
+         See clv.ipynb for:
+         
+         Data overview, missing values analysis
+         
+         Event type distribution (view, addtocart, transaction)
+         
+         CLV-relevant feature engineering (purchase count, product diversity, recency, etc.)
+         
+         Sample outputs and insights
+
+
+7. Model Training and Evaluation
 
    Evaluated three regression models for predicting Customer Lifetime Value (CLV) as the number of purchases per customer:
 
@@ -98,7 +145,24 @@ Predicting Customer Lifetime Value (CLV) for B2B E-Commerce Using Machine Learni
 
 
 
-7. API Usage
+   Deployment
+   
+      Deploy model as FastAPI web app:
+
+         bash
+         uvicorn main:app --reload
+         Visit http://localhost:8000/docs for interactive API documentation.
+
+      (Optional) Build and run via Docker:
+      
+            bash
+            docker build -t clv-api .
+            docker run -p 80:80 clv-api
+
+
+
+
+8. API Usage
 
         ## Running the API
 
